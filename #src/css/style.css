@@ -816,3 +816,7 @@ form {
     margin-bottom: 4.7rem;
     color: white;
 }
+/*map*/
+.gm-style .place-card-medium {
+    display: none;
+}
