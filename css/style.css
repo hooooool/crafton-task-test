@@ -1042,6 +1042,12 @@ h1 {
   color: white;
 }
 
+/*map*/
+
+.gm-style .place-card-medium {
+  display: none;
+}
+
 @media (min-width:900px) {
   .mobileLinks {
     display: none;

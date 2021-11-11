@@ -23,12 +23,12 @@ window.addEventListener("scroll", ()=>{
   if(window.pageYOffset >= 100){
     wrapper.classList.add("scrollMenu");
     wrapper.style.height = "10%";
-    brandImg.style.width = "50%";
+    brandImg.style.width = "45%";
   }
   else if(window.pageYOffset < 100){
     wrapper.classList.remove("scrollMenu");
-    wrapper.style.height = "13%";
-    brandImg.style.width = "80%";
+    wrapper.style.height = "15%";
+    brandImg.style.width = "70%";
   }
 });
 const mobileMenu = document.querySelector(".mobileLinks");
