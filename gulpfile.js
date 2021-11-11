@@ -42,7 +42,10 @@ let { src, dest } = require('gulp'),
     webp = require('gulp-webp'),
     webphtml = require('gulp-webp-html'),
     ttf2woff = require('gulp-ttf2woff'),
-    ttf2woff2 = require('gulp-ttf2woff2');
+    ttf2woff2 = require('gulp-ttf2woff2')
+    ghPages = require('gulp-gh-pages');
+
+
 
     
 function browserSync(params) {
@@ -149,6 +152,14 @@ function clean(params) {
 let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+
+
+
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+      .pipe(ghPages());
+  });
+ 
 
 exports.fonts = fonts;
 exports.images = images;
